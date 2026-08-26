@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="University College of Engineering Arni - Department Information Portal">
+    <title>University College of Engineering Arni | Department Information Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="top-header">
+            <div class="container brand-row">
+                <a class="brand" href="#home" aria-label="University College of Engineering Arni home">
+                    <span class="brand-mark" aria-hidden="true">UCEA</span>
+                    <span>
+                        <strong>UNIVERSITY COLLEGE OF ENGINEERING ARNI</strong>
+                        <small>Department Information Portal</small>
+                    </span>
+                </a>
+
+                <img
+                    class="college-logo"
+                    src="images/logo.png"
+                    alt="University College of Engineering Arni logo placeholder"
+                    onerror="this.style.display='none';"
+                >
+
+                <button class="menu-toggle" id="menuToggle" type="button"
+                        aria-controls="mainNav" aria-expanded="false"
+                        aria-label="Open navigation menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="nav-bar">
+            <div class="container nav-row">
+                <nav id="mainNav" class="main-nav" aria-label="Primary navigation">
+                    <a href="#home" data-nav="home">Home</a>
+
+                    <div class="nav-dropdown">
+                        <button class="dropdown-toggle" type="button"
+                                aria-expanded="false" aria-controls="departmentMenu">
+                            Departments <span aria-hidden="true">▼</span>
+                        </button>
+                        <div class="dropdown-menu" id="departmentMenu" role="menu"></div>
+                    </div>
+
+                    <div class="nav-dropdown">
+                        <button class="dropdown-toggle" type="button"
+                                aria-expanded="false" aria-controls="divisionMenu">
+                            Divisions <span aria-hidden="true">▼</span>
+                        </button>
+                        <div class="dropdown-menu" id="divisionMenu" role="menu">
+                            <button type="button" role="menuitem" data-division="staff">Staff</button>
+                            <button type="button" role="menuitem" data-division="students">Students</button>
+                            <button type="button" role="menuitem" data-division="laboratory">Laboratory</button>
+                        </div>
+                    </div>
+
+                    <a href="#about" data-nav="about">About</a>
+                    <a href="#contact" data-nav="contact">Contact</a>
+                </nav>
+
+                <form class="search-form" id="searchForm" role="search">
+                    <label class="sr-only" for="searchInput">Search departments, staff, laboratories or student information</label>
+                    <input id="searchInput" type="search"
+                           placeholder="Search portal..."
+                           autocomplete="off">
+                    <button type="submit" aria-label="Search">Search</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <p class="eyebrow">ENGINEERING EDUCATION • ACADEMIC INFORMATION</p>
+                <h1>University College of Engineering Arni</h1>
+                <p class="hero-subtitle">Department Information Portal</p>
+                <p class="hero-text">
+                    A professional information interface for exploring academic departments,
+                    staff, students and laboratories. All institutional and personal details
+                    shown in this demonstration are placeholders until replaced with verified data.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" type="button" data-action="explore">Explore Departments</button>
+                    <a class="btn btn-secondary" href="#about">About the Portal</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-light" aria-labelledby="department-cards-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">ACADEMIC UNITS</p>
+                    <h2 id="department-cards-title">Departments</h2>
+                    <p>Select a department to view its overview and associated divisions.</p>
+                </div>
+                <div id="departmentCards" class="department-grid"></div>
+            </div>
+        </section>
+
+        <section id="portal" class="section" aria-labelledby="portal-title">
+            <div class="container">
+                <div class="section-heading portal-heading">
+                    <div>
+                        <p class="eyebrow">SELECTED ACADEMIC UNIT</p>
+                        <h2 id="portal-title">Department Information</h2>
+                    </div>
+                    <span id="selectedDepartmentBadge" class="status-badge">Computer Science and Engineering</span>
+                </div>
+                <div id="contentArea" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section id="about" class="section section-light" aria-labelledby="about-title">
+            <div class="container about-grid">
+                <div>
+                    <p class="eyebrow">ABOUT</p>
+                    <h2 id="about-title">About University College of Engineering Arni</h2>
+                    <p>
+                        This portal is a professional front-end template designed to organize
+                        academic information for University College of Engineering Arni.
+                        Official institutional descriptions, statistics, policies and contact
+                        details should be inserted by an authorized administrator.
+                    </p>
+                    <p>
+                        The interface is structured around academic excellence, engineering
+                        education, practical laboratory learning and student development,
+                        while keeping placeholder content clearly identifiable.
+                    </p>
+                </div>
+                <div class="about-points">
+                    <article><span>01</span><h3>Academic Excellence</h3><p>Structured information for programs, faculty and academic units.</p></article>
+                    <article><span>02</span><h3>Engineering Education</h3><p>A clean presentation layer for engineering disciplines and learning resources.</p></article>
+                    <article><span>03</span><h3>Laboratories</h3><p>Organize laboratory descriptions, equipment and device counts by department.</p></article>
+                    <article><span>04</span><h3>Student Development</h3><p>Present student statistics, advisors and representatives in one place.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section" aria-labelledby="contact-title">
+            <div class="container contact-grid">
+                <div>
+                    <p class="eyebrow">CONTACT</p>
+                    <h2 id="contact-title">Contact Information</h2>
+                    <div class="contact-details">
+                        <p><strong>Address</strong><br>University College of Engineering Arni, Tamil Nadu, India <em>(placeholder)</em></p>
+                        <p><strong>Phone</strong><br>+91-00000-00000 <em>(placeholder)</em></p>
+                        <p><strong>Email</strong><br><a href="mailto:info@example.edu">info@example.edu</a> <em>(placeholder)</em></p>
+                        <p><strong>Website</strong><br>www.example.edu <em>(placeholder)</em></p>
+                        <p><strong>Office Hours</strong><br>Monday–Friday, 9:00 AM–5:00 PM <em>(placeholder)</em></p>
+                    </div>
+                </div>
+
+                <form id="contactForm" class="contact-form" novalidate>
+                    <h3>Send an Enquiry</h3>
+                    <p class="form-note">Demonstration form only; no message is sent to a server.</p>
+
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required>
+
+                    <label for="subject">Subject</label>
+                    <input id="subject" name="subject" type="text" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button class="btn btn-primary" type="submit">Submit Enquiry</button>
+                    <p id="formMessage" class="form-message" role="status"></p>
+                </form>
+            </div>
+        </section>
+
+        <section id="searchResultsSection" class="section section-light hidden" aria-labelledby="search-results-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">PORTAL SEARCH</p>
+                    <h2 id="search-results-title">Search Results</h2>
+                    <p id="searchSummary"></p>
+                </div>
+                <div id="searchResults" class="search-results"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h2>University College of Engineering Arni</h2>
+                <p>Department Information Portal</p>
+                <p class="footer-placeholder">Template content — replace all placeholder institutional data with verified information.</p>
+            </div>
+            <div>
+                <h3>Useful Links</h3>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#portal">Departments</a>
+                    <button type="button" data-footer-division="staff">Staff</button>
+                    <button type="button" data-footer-division="students">Students</button>
+                    <button type="button" data-footer-division="laboratory">Laboratories</button>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">© 2026 University College of Engineering Arni. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
